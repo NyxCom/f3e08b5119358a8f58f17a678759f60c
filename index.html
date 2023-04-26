@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+</head>
+<link rel="stylesheet" href="./32bb636196f91ed59d7a49190e26b42c/css/motiva_sans.css">
+<link rel="stylesheet" href="./32bb636196f91ed59d7a49190e26b42c/css/main.css">
+
+<script>
+	function appConfig() {alert('app.Config');}
+	function appMinimize() {alert('app.Minimize');}
+	function appClose() {alert('app.Close');}
+	function appOpenBrowser(url) {alert('app.OpenBrowser|'+url);}
+
+	function appPlayGame()
+	{
+		if (document.getElementById("play_game").classList.contains('button_disabled') == false)
+		{
+			alert('app.PlayGame');
+		}
+	}
+
+	function appPlayGameStatus(status)
+	{
+		if (status == 'enable')
+			document.getElementById("play_game").classList.remove('button_disabled');
+		else
+			document.getElementById("play_game").classList.add('button_disabled');
+	}
+
+	function appSetProgressInfo(content)
+	{
+		document.getElementById("progress_info").innerHTML = content;
+	}
+
+	function appSetProgressSize(progress, size)
+	{
+		document.getElementById("progress_bar"+progress).style.width = size+"px";
+	}
+
+	function appShowTerms()
+	{
+		document.getElementById("terms").click();
+	}
+
+	function appSetAcceptTerms()
+	{
+		alert('app.AcceptTerms');
+	}
+</script>
+
+<body>
+
+	<div class="wrapper">
+		<!----------------- MODAL ------------------->
+		<div class="modal" id="modal-name">
+		  <div class="modal-sandbox"></div>
+		  <div class="modal-box ns">
+			<div class="modal-header">
+			  <div class="close-modal">&#10006;</div> 
+			  <h1>Termos e Condições</h1>
+			</div>
+			<div class="modal-body">
+				<br />
+				<h1>Termos e Condições de Utilização Padrão</h1>
+				<i>A NyxCom gostaria de agradecer sua visita; <u>ao jogar em nossa comunidade você está declarando aceitar e concordar totalmente com os termos disponíveis abaixo</u>.</i>
+				<br />
+				<br />
+				<br />
+				<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/pt-br/policy/terms');"><b>Termos e Condições de Utilização Padrão</b></a>
+				<br />
+				<br />
+				<br />
+				Caso você esteja em desacordo com os Termos e Condições acima, por favor desinstale imediatamente o conteúdo.
+			</div>
+		  </div>
+		</div>
+		<!----------------- MODAL ------------------->
+
+		<div class="sysmenu ns">
+			<div onclick="javascript:appConfig();" class="sysmenu_cfg"></div>
+			<div onclick="javascript:appMinimize();" class="sysmenu_minimizer"></div>
+			<div onclick="javascript:appClose();" class="sysmenu_close"></div>
+		</div>
+		
+		<div class="menu1 ns">
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('http://aom2.org/register');"><font>CADASTRAR</font></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('http://aom2.org/wiki');"><font>WIKI</font></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('http://help.aom2.org');"><font>SUPORTE</font></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://facebook.com/groups/AoM2Oficial/');"><font>COMUNIDADE</font></a>
+		</div>
+		
+		<div class="menu2 ns">
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/shop/cash');"><font color="red">RECARREGAR MOEDAS</font></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://chat.whatsapp.com/invite/Hz1uJKrnRLg8jC21kDaZOY');"><div class="ico-whatsapp"></div></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://discord.gg/mHCjKGw');"><div class="ico-discord"></div></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('http://facebook.com/AoM2.LA');"><div class="ico-facebook"></div></a>
+			<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('http://instagram.com/AoM2.LA');"><div class="ico-instagram"></div></a>
+		</div>
+		
+		<!-- SLIDE -->
+		<div class="slide_board ns">
+			<ul class="slides">
+
+				<!-- slide 1 -->
+				<input type="radio" name="radio-btn" id="img-1" checked />
+				<li class="slide-container">
+					<div class="slide">
+						<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/pt-br/events/205');">
+							<img src="https://i.imgur.com/mzxt2aS.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<label for="img-4" class="prev">&#x2039;</label>
+						<label for="img-2" class="next">&#x203a;</label>
+					</div>
+				</li>
+
+				<!-- slide 2 -->
+				<input type="radio" name="radio-btn" id="img-2" />
+				<li class="slide-container">
+					<div class="slide">
+						<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/pt-br/events/205');">
+							<img src="https://i.imgur.com/mzxt2aS.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<label for="img-1" class="prev">&#x2039;</label>
+						<label for="img-3" class="next">&#x203a;</label>
+					</div>
+				</li>
+
+				<!-- slide 3 -->
+				<input type="radio" name="radio-btn" id="img-3" />
+				<li class="slide-container">
+					<div class="slide">
+						<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/pt-br/events/205');">
+							<img src="https://i.imgur.com/mzxt2aS.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<label for="img-2" class="prev">&#x2039;</label>
+						<label for="img-4" class="next">&#x203a;</label>
+					</div>
+				</li>
+
+				<!-- slide 4 -->
+				<input type="radio" name="radio-btn" id="img-4" />
+				<li class="slide-container">
+					<div class="slide">
+						<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/pt-br/events/205');">
+							<img src="https://i.imgur.com/mzxt2aS.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<label for="img-3" class="prev">&#x2039;</label>
+						<label for="img-1" class="next">&#x203a;</label>
+					</div>
+				</li>
+
+				<li class="nav-dots">
+					<label for="img-1" class="nav-dot" id="img-dot-1"></label>
+					<label for="img-2" class="nav-dot" id="img-dot-2"></label>
+					<label for="img-3" class="nav-dot" id="img-dot-3"></label>
+					<label for="img-4" class="nav-dot" id="img-dot-4"></label>
+				</li>
+			</ul>
+		</div>
+		<!-- //SLIDE -->
+		
+		<!-- EVENT -->
+	
+<style>
+.event_wrapper {
+	font-family: "Motiva Sans";
+	position:absolute;
+	margin-top:165px;
+	margin-left:687px;
+	width:205px;
+	height:170px;
+	border-right: 1px solid rgba(206, 88, 21, 0.2);
+}
+
+.event_content {
+	text-align:center;
+	width:160px;
+	height:160px;
+}
+
+.event_content > b {
+	color: #ce5815;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.event_wrapper_month {
+	margin-top:10px;
+	text-align:center;
+	color:white;
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+.event_wrapper_day {
+	text-align:center;
+	color:white;
+	font-size:35px;
+	border-bottom: 1px solid rgba(206, 88, 21, 0.4);
+}
+
+.event_wrapper_time {
+	margin-top:5px;
+	text-align:center;
+	color:white;
+	font-size:12px;
+	color:#ce5815;
+}
+
+.event_wrapper_time > a {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	color:#ce5815;
+	text-decoration:none;
+}
+.event_wrapper_time > a:hover {
+	border-radius: 50%;
+	background:rgba(255,255,255,0.1);
+}
+
+.event_wrapper_desc {
+	margin-top:5px;
+	text-align:center;
+	color:white;
+	font-size:12px;
+	color:white;
+}
+
+.event_wrapper_desc > a {
+	color:white;
+	text-decoration:none;
+}
+
+.event_board_content {
+	position:absolute;
+	width:160px;
+}
+</style>
+
+		<div class="event_wrapper">
+			<div class="event_content ns">
+				<b>PRÓXIMOS EVENTOS</b>
+				<div class="event_wrapper_content" style="opacity:0;">
+					<div class="event_wrapper_month" id="event_wrapper_month"></div>
+					<div class="event_wrapper_day" id="event_wrapper_day"></div>
+
+					<!-- --------------------------------------- SEGUNDA -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_1_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('1', '2', '2');"><</a> 15:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('1', '2', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzEy');">Encontre o Mestre</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_1_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('1', '2', '1');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('1', '2', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<!-- --------------------------------------- TERÇA -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_2_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '3');"><</a> 15:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzA4');">Momento da Conquista</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_2_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '1');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzEy');">Encontre o Mestre</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_2_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '2');"><</a> 21:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('2', '3', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTg5');">Hora de Upar</a></div>
+					</div>
+					
+					<!-- --------------------------------------- QUARTA -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_3_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '4');"><</a> 11:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/Mjcy');">Instante da Fortuna</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_3_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '1');"><</a> 16:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTg5');">Hora de Upar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_3_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '2');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '4');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_3_4" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '3');"><</a> 21:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('3', '4', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzA4');">Momento da Conquista</a></div>
+					</div>
+					
+					<!-- --------------------------------------- QUINTA -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_4_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '4');"><</a> 11:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzA4');">Momento da Conquista</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_4_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '1');"><</a> 16:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_4_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '2');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '4');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTUy');">Invasão da Árvore Demôniaca</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_4_4" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '3');"><</a> 21:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('4', '4', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTg5');">Hora de Upar</a></div>
+					</div>
+					
+					<!-- --------------------------------------- SEXTA -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_5_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '4');"><</a> 00:00 AM <a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_5_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '1');"><</a> 11:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/Mjcy');">Instante da Fortuna</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_5_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '2');"><</a> 16:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '4');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTg5');">Hora de Upar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_5_4" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '3');"><</a> 22:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('5', '4', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc">Guerra da Tocha</div>
+					</div>
+					
+					<!-- --------------------------------------- SABADO -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_6_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '3');"><</a> 16:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_6_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '1');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzEy');">Encontre o Mestre</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_6_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '2');"><</a> 21:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('6', '3', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjAz');">Torre com GM</a></div>
+					</div>
+					
+					<!-- --------------------------------------- DOMINGO -------------------------------------------------------->
+					<div class="event_board_content" id="event_board_7_1" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '4');"><</a> 00:00 AM <a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '2');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MjU5');">Arca do Luar</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_7_2" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '1');"><</a> 15:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '3');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MzEy');">Encontre o Mestre</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_7_3" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '2');"><</a> 18:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '4');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);">Evento OX</a></div>
+					</div>
+					
+					<div class="event_board_content" id="event_board_7_4" style="visibility:hidden;">
+						<div class="event_wrapper_time">
+							<a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '3');"><</a> 20:00 PM <a href="javascript:void(0);" onclick="javascript:SetNext('7', '4', '1');">></a>
+						</div>
+						<div class="event_wrapper_desc"><a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/events/topic/MTgy');">Regresso Malígno</a></div>
+					</div>
+					
+	
+
+				</div>
+			</div>
+		</div>
+		
+<script>
+	function SetNext(day, total, id)
+	{
+
+		for (i = 1; i <= total; i++)
+			document.getElementById('event_board_'+day+'_'+i+'').style.visibility="hidden";
+
+		document.getElementById('event_board_'+day+'_'+id+'').style.visibility="visible";
+	}
+	
+	function ChangeEvents(day)
+	{
+		// Segunda
+		for (i = 1; i <= 2; i++)
+			document.getElementById('event_board_1_'+i+'').style.visibility="hidden";
+		// Terça
+		for (i = 1; i <= 3; i++)
+			document.getElementById('event_board_2_'+i+'').style.visibility="hidden";
+		// Quarta
+		for (i = 1; i <= 4; i++)
+			document.getElementById('event_board_3_'+i+'').style.visibility="hidden";
+		// Quinta
+		for (i = 1; i <= 4; i++)
+			document.getElementById('event_board_4_'+i+'').style.visibility="hidden";
+		// Sexta
+		for (i = 1; i <= 4; i++)
+			document.getElementById('event_board_5_'+i+'').style.visibility="hidden";
+		// Sabado
+		for (i = 1; i <= 3; i++)
+			document.getElementById('event_board_6_'+i+'').style.visibility="hidden";
+		// Domingo
+		for (i = 1; i <= 3; i++)
+			document.getElementById('event_board_7_'+i+'').style.visibility="hidden";
+			
+		document.getElementById('event_board_'+day+'_1').style.visibility="visible";
+	}
+	
+	function UpdateInfo(month, day)
+	{
+		document.getElementById("event_wrapper_month").innerHTML = month;
+		document.getElementById("event_wrapper_day").innerHTML = day;
+	}
+</script>
+		
+		<!-- //EVENT -->
+		
+		<!-- CALENDAR -->
+		<!--<div id="calendar_board" class="calendar_board ns">
+			<div id="calendar_board"></div>
+		</div>
+		
+
+		-->
+		
+		<div id="calendar_board" class="calendar_board ns">
+			<div class="calendar-wrapper">
+				<div id="divCal"></div>
+			</div>
+		</div>
+		
+
+		<!-- //CALENDAR -->
+		
+		<!-- NOTICE -->
+		<div class="notice_board_title ns">ÚLTIMAS INFORMAÇÕES</div>
+			<div class="notice_board ns">
+				<div class="notice_board_block">
+					<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/news/topic/MTcw');">
+					<div class="notice_board_date">14 <font style="font-size:13px; text-transform: uppercase;">ABR</font></div>
+						<div class="notice_board_info">A Chegada dos Trajes</div>
+					</a>
+				</div>
+				<div class="notice_board_block">
+					<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/news/topic/MjM0');">
+					<div class="notice_board_date">20 <font style="font-size:13px; text-transform: uppercase;">OUT</font></div>
+						<div class="notice_board_info">Reposicionamento das Pedras</div>
+					</a>
+				</div>
+				<div class="notice_board_block">
+					<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/news/topic/MzQ0');">
+					<div class="notice_board_date">16 <font style="font-size:13px; text-transform: uppercase;">MAR</font></div>
+						<div class="notice_board_info">Sistema de Imperadores</div>
+					</a>
+				</div>
+				<div class="notice_board_block">
+					<a href="javascript:void(0);" onclick="javascript:appOpenBrowser('https://aom2.org/board/updates/topic/MzUy');">
+					<div class="notice_board_date">14 <font style="font-size:13px; text-transform: uppercase;">ABR</font></div>
+						<div class="notice_board_info">Changelogs 2.0.1.14042019</div>
+					</a>
+				</div>
+			</div>
+
+		<div id="play_game" onclick="javascript:appPlayGame();" class="play_button button_disabled"></div>
+		<div class="terms_condition ns modal-trigger" data-modal="modal-name" id="terms">TERMOS E CONDIÇÕES</div>
+		
+		<div class="progress_info ns" id="progress_info">UNKNOWN</div>
+		<div class="progress_bar_out progress_bar1"><div class="progress_bar" id="progress_bar1" style="width:0px;"></div></div>
+		<div class="progress_bar_out progress_bar2"><div class="progress_bar" id="progress_bar2" style="width:0px;"></div></div>
+	</div>
+	
+	
+
+	
+<style>
+
+.calendar-wrapper {
+	font-family: "Motiva Sans";
+	text-align:center;
+}
+
+.days > td {
+	font-weight: bold;
+	color: #ce5815;
+	width:25px;
+	height:25px;
+}
+
+.not-current, .normal {
+	width:25px;
+	height:20px;
+}
+
+.not-current {
+	color: #3e3d3d;
+}
+
+.normal {
+	color: white;
+}
+
+.normal:hover, .today:hover {
+	border-radius: 50%;
+	background:rgba(255,255,255,0.1);
+	cursor:pointer;
+}
+
+.today {
+	color: #ce5815;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+}
+
+.oldday {
+	color:white;
+	opacity:0.4;
+	cursor:default;
+}
+
+.oldday:hover {
+	background:none;
+}
+
+
+
+</style>
+
+
+	
+	<script>
+	var Cal = function(divId) {
+
+	  //Store div id
+	  this.divId = divId;
+
+	  // Days of week, starting on Sunday
+	  this.DaysOfWeek = [
+		'D',
+		'S',
+		'T',
+		'Q',
+		'Q',
+		'S',
+		'S'
+	  ];
+	  
+	  this.DaysOfWeekNumber = [
+		'7',
+		'1',
+		'2',
+		'3',
+		'4',
+		'5',
+		'6'
+	  ];
+
+	  // Months, stating on January
+	  this.Months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
+
+	  // Set the current month, year
+	  var d = new Date();
+
+	  this.currMonth = d.getMonth();
+	  this.currYear = d.getFullYear();
+	  this.currDay = d.getDate();
+
+	};
+
+	// Goes to next month
+	Cal.prototype.nextMonth = function() {
+	  if ( this.currMonth == 11 ) {
+		this.currMonth = 0;
+		this.currYear = this.currYear + 1;
+	  }
+	  else {
+		this.currMonth = this.currMonth + 1;
+	  }
+	  this.showcurr();
+	};
+
+	// Goes to previous month
+	Cal.prototype.previousMonth = function() {
+	  if ( this.currMonth == 0 ) {
+		this.currMonth = 11;
+		this.currYear = this.currYear - 1;
+	  }
+	  else {
+		this.currMonth = this.currMonth - 1;
+	  }
+	  this.showcurr();
+	};
+
+	// Show current month
+	Cal.prototype.showcurr = function() {
+	  this.showMonth(this.currYear, this.currMonth);
+	};
+
+	// Show month (year, month)
+	Cal.prototype.showMonth = function(y, m) {
+
+	  var d = new Date()
+	  // First day of the week in the selected month
+	  , firstDayOfMonth = new Date(y, m, 1).getDay()
+	  // Last day of the selected month
+	  , lastDateOfMonth =  new Date(y, m+1, 0).getDate()
+	  // Last day of the previous month
+	  , lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
+
+
+	  var html = '<table>';
+
+	  html += '<tr class="days">';
+	  for(var i=0; i < this.DaysOfWeek.length;i++) {
+		html += '<td>' + this.DaysOfWeek[i] + '</td>';
+	  }
+	  html += '</tr>';
+
+	  var i=1;
+	  do {
+
+		var dow = new Date(y, m, i).getDay();
+
+		if ( dow == 0 ) {
+		  html += '<tr>';
+		}
+
+		else if ( i == 1 ) {
+		  html += '<tr>';
+		  var k = lastDayOfLastMonth - firstDayOfMonth+1;
+		  for(var j=0; j < firstDayOfMonth; j++) {
+			html += '<td class="not-current">' + k + '</td>';
+			k++;
+		  }
+		}
+
+		// Write the current day in the loop
+		var chk = new Date();
+		var chkY = chk.getFullYear();
+		var chkM = chk.getMonth();
+		if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
+		  html += '<td class="today" onclick="javascript:UpdateInfo(\''+this.Months[this.currMonth]+'\', \''+i+'\');ChangeEvents(\''+this.DaysOfWeekNumber[dow]+'\');">' + i + '</td>';
+		  UpdateInfo(this.Months[this.currMonth], i);
+		  ChangeEvents(this.DaysOfWeekNumber[dow]);
+		} else {
+			if (i < this.currDay)
+				html += '<td class="oldday">' + i + '</td>';
+			else
+				html += '<td class="normal" onclick="javascript:UpdateInfo(\''+this.Months[this.currMonth]+'\', \''+i+'\');ChangeEvents(\''+this.DaysOfWeekNumber[dow]+'\');">' + i + '</td>';
+		}
+
+		if ( dow == 6 ) {
+		  html += '</tr>';
+		}
+
+		else if ( i == lastDateOfMonth ) {
+		  var k=1;
+		  for(dow; dow < 6; dow++) {
+			html += '<td class="not-current">' + k + '</td>';
+			k++;
+		  }
+		}
+
+		i++;
+	  }while(i <= lastDateOfMonth);
+
+	  html += '</table>';
+
+	  document.getElementById(this.divId).innerHTML = html;
+	};
+
+	window.onload = function() {
+	  var c = new Cal("divCal");			
+	  c.showcurr();
+	}
+
+	function getId(id) {
+	  return document.getElementById(id);
+	}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--<script src="https://aom2.org/www_launcher/32bb636196f91ed59d7a49190e26b42c/js/snow.js"></script>-->
+	<script>
+		$(window).load(function() {
+			alert('app.LauncherRead');
+		});
+	</script>
+	
+	<script>
+		var modal = document.getElementById('myModal');
+		var btn = document.getElementById("myBtn");
+		var span = document.getElementsByClassName("close")[0];
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	
+	<script>
+	$(".modal-trigger").click(function(e){
+	  e.preventDefault();
+	  dataModal = $(this).attr("data-modal");
+	  $("#" + dataModal).css({"display":"block"});
+	});
+
+	$(".close-modal, .modal-sandbox").click(function()
+	{
+		appSetAcceptTerms();
+		$(".modal").css({"display":"none"});
+	});
+	</script>
+
+</body>
+
+</html>
